@@ -1,4 +1,5 @@
-var serviceURL = "http://localhost/directory/services/";
+//var serviceURL = "http://localhost/directory/services/";
+var serviceURL = "http://polgahawelatown.com/EmployeeDirectoryJQM/services/";
 
 var employees;
 
