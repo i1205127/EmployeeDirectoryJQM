@@ -24,6 +24,16 @@ function displayEmployee(data) {
 	} else if (employee.wardid == 2){
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
+	
+	
+	} else if (employee.wardid == 3){
+		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
+
+	} else if (employee.wardid == 4){
+		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
+
 	}
 	
 	
