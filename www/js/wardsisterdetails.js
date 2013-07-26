@@ -7,7 +7,7 @@ function displayEmployee(data) {
 	var employee = data.item;
 	console.log(employee);
 	$('#employeePic').attr('src', 'pics/' + employee.picture);
-	$('#fullName').text(employee.firstName + ' ' + employee.lastName);
+	$('#fullName').text(employee.fname + ' ' + employee.lname);
 	$('#employeeTitle').text(employee.title);
 	$('#city').text(employee.city);
 	console.log(employee.officePhone);
