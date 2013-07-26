@@ -12,7 +12,7 @@ function displayEmployee(data) {
 	$('#city').text(employee.wardname);
 	console.log(employee.officePhone);
 	if (employee.wardname == "Operation") {
-		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.id + '"><h3>View Manager</h3>' +
+		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.id + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.id + ' ' + employee.wardname + '</p></a></li>');
 	}
 	if (employee.reportCount>0) {
