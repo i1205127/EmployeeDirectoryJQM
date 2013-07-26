@@ -44,7 +44,7 @@ function displayEmployee(data) {
 //		$('#actionList').append('<li><a href="sms:' + employee.cellPhone + '"><h3>SMS</h3>' +
 //				'<p>' + employee.cellPhone + '</p></a></li>');
 //	}
-//	$('#actionList').listview('refresh');
+	$('#actionList').listview('refresh');
 	
 }
 
