@@ -11,7 +11,7 @@ function displayEmployee(data) {
 	$('#employeeTitle').text(employee.title);
 	$('#city').text(employee.name);
 	console.log(employee.officePhone);
-	if (employee.name == "Emergency") {
+	if (employee.name == "Operation") {
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.name + '"><h3>View Manager</h3>' +
 				'<p>' + employee.id + ' ' + employee.name + '</p></a></li>');
 	}
