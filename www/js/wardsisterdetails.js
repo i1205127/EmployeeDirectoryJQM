@@ -5,6 +5,7 @@ $('#detailsPage').live('pageshow', function(event) {
 
 function displayEmployee(data) {
 	var employee = data.item;
+	var managerPhone = 07901036713;
 	console.log(employee);
 	$('#employeePic').attr('src', 'pics/' + employee.wspicture);
 	$('#fullName').text(employee.wsfname + ' ' + employee.wslname);
@@ -15,8 +16,8 @@ function displayEmployee(data) {
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 		
-		$('#actionList').append('<li><a href="tel:' + 07714625533 + '"><h3>Call Bank Manager</h3>' +
-				'<p>' + 07714625533 + '</p></a></li>');
+		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
+				'<p>' + managerPhone + '</p></a></li>');
 
 				
 
