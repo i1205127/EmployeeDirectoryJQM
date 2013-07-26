@@ -15,7 +15,7 @@ function getEmployeeList() {
 			$('#employeeList').append('<li><a href="employeedetails.html?id=' + employee.id + '">' +
 					'<img src="pics/' + employee.picture + '"/>' +
 					'<h4>' + employee.fname + ' ' + employee.lname + '</h4>' +
-					'<p>' + employee.title + '</p>' +
+					'<p>' + employee.wardid + '</p>' +
 					'</a></li>');
 		});
 		$('#employeeList').listview('refresh');
