@@ -6,8 +6,8 @@ $('#detailsPage').live('pageshow', function(event) {
 function displayEmployee(data) {
 	var employee = data.item;
 	console.log(employee);
-	$('#employeePic').attr('src', 'pics/' + employee.picture);
-	$('#fullName').text(employee.fname + ' ' + employee.lname);
+	$('#employeePic').attr('src', 'pics/' + employee.wspicture);
+	$('#fullName').text(employee.wsfname + ' ' + employee.wslname);
 	$('#employeeTitle').text(employee.title);
 	$('#city').text(employee.wardname);
 	console.log(employee.officePhone);
