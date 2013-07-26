@@ -14,7 +14,7 @@ function displayEmployee(data) {
 	$('#city').text(employee.wardname);
 	console.log(employee.officePhone);
 	if (employee.wardid == 1) {
-		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+		$('#actionList').append('<li><a href="shiftdetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 		
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
@@ -26,11 +26,8 @@ function displayEmployee(data) {
 		$('#actionList').append('<li><a href="sms:' + managerPhone + '"><h3>SMS Bank Manager</h3>' +
 				'<p>' + managerPhone + '</p></a></li>');
 
-
-
-
 	} else if (employee.wardid == 2){
-		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+		$('#actionList').append('<li><a href="shiftdetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 	
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
@@ -43,7 +40,7 @@ function displayEmployee(data) {
 				'<p>' + managerPhone + '</p></a></li>');				
 	
 	} else if (employee.wardid == 3){
-		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+		$('#actionList').append('<li><a href="shiftdetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
@@ -56,7 +53,7 @@ function displayEmployee(data) {
 				'<p>' + managerPhone + '</p></a></li>');
 				
 	} else if (employee.wardid == 4){
-		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+		$('#actionList').append('<li><a href="shiftdetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
@@ -69,31 +66,6 @@ function displayEmployee(data) {
 				'<p>' + managerPhone + '</p></a></li>');
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-//	if (employee.reportCount>0) {
-//		$('#actionList').append('<li><a href="reportlist.html?id=' + employee.id + '"><h3>View Direct Reports</h3>' +
-//				'<p>' + employee.reportCount + '</p></a></li>');
-//	}
-//	if (employee.email) {
-//		$('#actionList').append('<li><a href="mailto:' + employee.email + '"><h3>Email</h3>' +
-//				'<p>' + employee.email + '</p></a></li>');
-//	}
-//	if (employee.officePhone) {
-//		$('#actionList').append('<li><a href="tel:' + employee.officePhone + '"><h3>Call Office</h3>' +
-//				'<p>' + employee.officePhone + '</p></a></li>');
-//	}
-//	if (employee.cellPhone) {
-//		$('#actionList').append('<li><a href="tel:' + employee.cellPhone + '"><h3>Call Cell</h3>' +
-//				'<p>' + employee.cellPhone + '</p></a></li>');
-//		$('#actionList').append('<li><a href="sms:' + employee.cellPhone + '"><h3>SMS</h3>' +
-//				'<p>' + employee.cellPhone + '</p></a></li>');
-//	}
 	$('#actionList').listview('refresh');
 	
 }
