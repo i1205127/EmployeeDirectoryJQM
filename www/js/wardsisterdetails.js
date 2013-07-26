@@ -20,10 +20,10 @@ function displayEmployee(data) {
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
 				'<p>' + managerPhone + '</p></a></li>');
 
-		$('#actionList').append('<li><a href="mailto:' + managerEmail + '"><h3>Email</h3>' +
+		$('#actionList').append('<li><a href="mailto:' + managerEmail + '"><h3>Email Bank Manager</h3>' +
 				'<p>' + managerEmail + '</p></a></li>');
 
-		$('#actionList').append('<li><a href="sms:' + managerPhone + '"><h3>SMS</h3>' +
+		$('#actionList').append('<li><a href="sms:' + managerPhone + '"><h3>SMS Bank Manager</h3>' +
 				'<p>' + managerPhone + '</p></a></li>');
 
 
@@ -34,6 +34,12 @@ function displayEmployee(data) {
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 	
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
+				'<p>' + managerPhone + '</p></a></li>');
+
+		$('#actionList').append('<li><a href="mailto:' + managerEmail + '"><h3>Email Bank Manager</h3>' +
+				'<p>' + managerEmail + '</p></a></li>');
+
+		$('#actionList').append('<li><a href="sms:' + managerPhone + '"><h3>SMS Bank Manager</h3>' +
 				'<p>' + managerPhone + '</p></a></li>');				
 	
 	} else if (employee.wardid == 3){
@@ -42,12 +48,24 @@ function displayEmployee(data) {
 
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
 				'<p>' + managerPhone + '</p></a></li>');
+
+		$('#actionList').append('<li><a href="mailto:' + managerEmail + '"><h3>Email Bank Manager</h3>' +
+				'<p>' + managerEmail + '</p></a></li>');
+
+		$('#actionList').append('<li><a href="sms:' + managerPhone + '"><h3>SMS Bank Manager</h3>' +
+				'<p>' + managerPhone + '</p></a></li>');
 				
 	} else if (employee.wardid == 4){
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
+				'<p>' + managerPhone + '</p></a></li>');
+
+		$('#actionList').append('<li><a href="mailto:' + managerEmail + '"><h3>Email Bank Manager</h3>' +
+				'<p>' + managerEmail + '</p></a></li>');
+
+		$('#actionList').append('<li><a href="sms:' + managerPhone + '"><h3>SMS Bank Manager</h3>' +
 				'<p>' + managerPhone + '</p></a></li>');
 	}
 	
