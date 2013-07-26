@@ -23,7 +23,8 @@ function displayEmployee(data) {
 		$('#actionList').append('<li><a href="mailto:' + managerEmail + '"><h3>Email</h3>' +
 				'<p>' + managerEmail + '</p></a></li>');
 
-
+		$('#actionList').append('<li><a href="sms:' + managerPhone + '"><h3>SMS</h3>' +
+				'<p>' + managerPhone + '</p></a></li>');
 
 
 
