@@ -5,7 +5,7 @@ $('#detailsPage').live('pageshow', function(event) {
 
 function displayEmployee(data) {
 	var employee = data.item;
-	var managerPhone = 07403656097;
+	var managerPhone = 0740-365-6097;
 	console.log(employee);
 	$('#employeePic').attr('src', 'pics/' + employee.wspicture);
 	$('#fullName').text(employee.wsfname + ' ' + employee.wslname);
