@@ -14,6 +14,12 @@ function displayEmployee(data) {
 	if (employee.wardid == 1) {
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
+		
+		$('#actionList').append('<li><a href="tel:' + 07429384708 + '"><h3>Call Bank Manager</h3>' +
+				'<p>' + 07429384708 + '</p></a></li>');
+
+				
+
 	} else if (employee.wardid == 2){
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
