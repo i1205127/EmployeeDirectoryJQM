@@ -6,6 +6,7 @@ $('#detailsPage').live('pageshow', function(event) {
 function displayEmployee(data) {
 	var employee = data.item;
 	var managerPhone = "07403656097";
+	var managerEmail = "rasranasinghe@gmail.com"
 	console.log(employee);
 	$('#employeePic').attr('src', 'pics/' + employee.wspicture);
 	$('#fullName').text(employee.wsfname + ' ' + employee.wslname);
@@ -19,21 +20,34 @@ function displayEmployee(data) {
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
 				'<p>' + managerPhone + '</p></a></li>');
 
-				
+		$('#actionList').append('<li><a href="mailto:' + managerEmail + '"><h3>Email</h3>' +
+				'<p>' + managerEmail + '</p></a></li>');
+
+
+
+
+
 
 	} else if (employee.wardid == 2){
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 	
+		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
+				'<p>' + managerPhone + '</p></a></li>');				
 	
 	} else if (employee.wardid == 3){
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 
+		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
+				'<p>' + managerPhone + '</p></a></li>');
+				
 	} else if (employee.wardid == 4){
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 
+		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
+				'<p>' + managerPhone + '</p></a></li>');
 	}
 	
 	
