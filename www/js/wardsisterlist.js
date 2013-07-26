@@ -12,9 +12,9 @@ function getEmployeeList() {
 		$('#employeeList li').remove();
 		employees = data.items;
 		$.each(employees, function(index, employee) {
-			$('#employeeList').append('<li><a href="employeedetails.html?id=' + employee.id + '">' +
-					'<img src="pics/' + employee.picture + '"/>' +
-					'<h4>' + employee.fname + ' ' + employee.lname + '</h4>' +
+			$('#employeeList').append('<li><a href="employeedetails.html?id=' + employee.wsid + '">' +
+					'<img src="pics/' + employee.wspicture + '"/>' +
+					'<h4>' + employee.wsfname + ' ' + employee.wslname + '</h4>' +
 					'<p>' + employee.wardid + '</p>' +
 					'</a></li>');
 		});
