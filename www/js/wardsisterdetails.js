@@ -9,7 +9,7 @@ function displayEmployee(data) {
 	$('#employeePic').attr('src', 'pics/' + employee.picture);
 	$('#fullName').text(employee.fname + ' ' + employee.lname);
 	$('#employeeTitle').text(employee.title);
-	$('#city').text(employee.city);
+	$('#city').text(employee.name);
 	console.log(employee.officePhone);
 	if (employee.managerId>0) {
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.managerId + '"><h3>View Manager</h3>' +
