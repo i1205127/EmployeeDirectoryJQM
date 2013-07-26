@@ -9,11 +9,11 @@ function displayEmployee(data) {
 	$('#employeePic').attr('src', 'pics/' + employee.picture);
 	$('#fullName').text(employee.fname + ' ' + employee.lname);
 	$('#employeeTitle').text(employee.title);
-	$('#city').text(employee.name);
+	$('#city').text(employee.wardname);
 	console.log(employee.officePhone);
 	if (employee.wardname == "Operation") {
 		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.id + '"><h3>View Manager</h3>' +
-				'<p>' + employee.id + ' ' + employee.name + '</p></a></li>');
+				'<p>' + employee.id + ' ' + employee.wardname + '</p></a></li>');
 	}
 	if (employee.reportCount>0) {
 		$('#actionList').append('<li><a href="reportlist.html?id=' + employee.id + '"><h3>View Direct Reports</h3>' +
