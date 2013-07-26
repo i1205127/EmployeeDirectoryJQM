@@ -12,8 +12,8 @@ function displayEmployee(data) {
 	$('#city').text(employee.name);
 	console.log(employee.officePhone);
 	if (employee.name == "Operation") {
-		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.name + '"><h3>View Manager</h3>' +
-				'<p>' + employee.fname + ' ' + employee.lname + '</p></a></li>');
+		$('#actionList').append('<li><a href="employeedetails.html?id=' + employee.id + '"><h3>View Shifts</h3>' +
+				'</a></li>');
 	}
 	if (employee.reportCount>0) {
 		$('#actionList').append('<li><a href="reportlist.html?id=' + employee.id + '"><h3>View Direct Reports</h3>' +
