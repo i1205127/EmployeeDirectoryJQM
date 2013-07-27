@@ -4,8 +4,11 @@ $('#shiftListPage').live('pageshow', function(event) {
 	$.getJSON(serviceURL + 'getshift.php?id='+id, function (data) {
 		var reports = data.item;
 		$.each(reports, function(index, employee) {
-			$('#shiftList').append('<h4>' + employee.sdate + ' ' + employee.stime + '</h4>' +
-					'<span class="ui-li-count">' + employee.sfilled + '</span></a>');
+			$('#reportList').append('<li><a href="employeedetails.html?id=' + employee.sid + '">' +
+					'<h4>' + employee.sdate + ' ' + employee.stime + '</h4>' +
+					'<p>' + employee.sfilled + '</p>' +
+					'<span class="ui-li-count">' + employee.sfilled + '</span></a></li>');
+
 		});
 		$('#shiftList').listview('refresh');
 	});
