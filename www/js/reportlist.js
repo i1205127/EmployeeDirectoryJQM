@@ -1,5 +1,6 @@
 $('#reportListPage').live('pageshow', function(event) {
-	var id = getUrlVars()["id"];
+	//var id = getUrlVars()["id"];
+	var id = "1";
 	console.log("reports for " + id);
 	$.getJSON(serviceURL + 'getreports.php?id='+id, function (data) {
 				$.each(reports, function(index, employee) {
