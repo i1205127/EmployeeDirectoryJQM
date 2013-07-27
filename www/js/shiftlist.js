@@ -8,7 +8,7 @@ $('#shiftdetailsPage').bind('pageinit', function(event) {
 });
 
 function getShiftList() {
-	$.getJSON(serviceURL + 'getshifts.php', function(data) {
+	$.getJSON(serviceURL + 'getshift.php', function(data) {
 		//$('#employeeList li').remove();
 		shift = data.items;
 		console.log(shift);
