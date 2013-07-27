@@ -9,7 +9,7 @@ $('#shiftdetailsPage').bind('pageinit', function(event) {
 
 function getEmployeeList() {
 	$.getJSON(serviceURL + 'getshifts.php', function(data) {
-		$('#shiftList li').remove();
+		//$('#shiftList li').remove();
 		employees = data.items;
 		$.each(employees, function(index, employee) {
 			$('#shiftList').append('<li><a href="shiftdetails.html?id=' + employee.wsid + '">' +
