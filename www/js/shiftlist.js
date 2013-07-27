@@ -1,25 +1,21 @@
 //var serviceURL = "http://localhost/directory/services/";
 var serviceURL = "http://polgahawelatown.com/EmployeeDirectoryJQM/services/";
 
-var employees;
+var shift;
 
 $('#shiftdetailsPage').bind('pageinit', function(event) {
-	getEmployeeList();
+	getShiftList();
 });
 
-function getEmployeeList() {
+function getShiftList() {
 	$.getJSON(serviceURL + 'getshifts.php', function(data) {
-		//$('#shiftList li').remove();
-		employees = data.items;
-		$.each(employees, function(index, employee) {
-			$('#shiftList').append('<li><a href="shiftdetails.html?id=' + employee.wsid + '">' +
-					//'<img src="pics/' + employee.wspicture + '"/>' +
-					//'<h4>' + employee.sdate + ' ' + employee.stime + '</h4>' +
-					//'<p>' + employee.sfiled + '</p>' +
-					//'<p>'+ "test" +'</p>' +
-					" test " + 
-					
-					'</a></li>');
+		$('#employeeList li').remove();
+		shift = data.items;
+		$.each(shift, function(index, shift) {
+			$('#shiftList').append('<li>' +
+					'<h4>' + shift.sdate + ' ' + shift.stime + '</h4>' +
+					'<p>' + shift.sfilled + '</p>' +
+					'</li>');
 		});
 		$('#shiftList').listview('refresh');
 	});
