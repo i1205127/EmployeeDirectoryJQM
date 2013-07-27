@@ -14,7 +14,7 @@ function displayEmployee(data) {
 	$('#city').text(employee.wardname);
 	console.log(employee.officePhone);
 	if (employee.wardid == 1) {
-		$('#actionList').append('<li><a href="reportlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+		$('#actionList').append('<li><a href="shiftlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 		
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
@@ -27,7 +27,7 @@ function displayEmployee(data) {
 				'<p>' + managerPhone + '</p></a></li>');
 
 	} else if (employee.wardid == 2){
-		$('#actionList').append('<li><a href="reportlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+		$('#actionList').append('<li><a href="shiftlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 	
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
@@ -40,7 +40,7 @@ function displayEmployee(data) {
 				'<p>' + managerPhone + '</p></a></li>');				
 	
 	} else if (employee.wardid == 3){
-		$('#actionList').append('<li><a href="reportlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+		$('#actionList').append('<li><a href="shiftlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
@@ -53,7 +53,7 @@ function displayEmployee(data) {
 				'<p>' + managerPhone + '</p></a></li>');
 				
 	} else if (employee.wardid == 4){
-		$('#actionList').append('<li><a href="reportlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
+		$('#actionList').append('<li><a href="shiftlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
