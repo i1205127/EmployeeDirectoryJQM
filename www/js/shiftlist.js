@@ -16,6 +16,7 @@ function getShiftList() {
 					'<img src="pics/' + employee.wspicture + '"/>' +
 					'<h4>' + employee.sdate + ' ' + employee.stime + '</h4>' +
 					'<p>' + employee.sfiled + '</p>' +
+					'<p>'+ "test" +'</p>' +
 					'</a></li>');
 		});
 		$('#shiftList').listview('refresh');
