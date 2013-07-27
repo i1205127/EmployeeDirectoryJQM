@@ -4,9 +4,9 @@ $('#reportListPage').live('pageshow', function(event) {
 	$.getJSON(serviceURL + 'getreports.php?id='+id, function (data) {
 		var reports = data.items;
 		$.each(reports, function(index, employee) {
-			$('#reportList').append('<li><a href="employeedetails.html?id=' + employee.id + '">' +
-					'<h4>' + employee.firstName + ' ' + employee.lastName + '</h4>' +
-					'<p>' + employee.title + '</p>' +
+			$('#reportList').append('<li><a href="shiftlist.html?id=' + employee.sid + '">' +
+					'<h4>' + employee.stime + ' ' + employee.sid + '</h4>' +
+					'<p>' + employee.sdate + '</p>' +
 					'<span class="ui-li-count">' + employee.reportCount + '</span></a></li>');
 		});
 		$('#reportList').listview('refresh');
