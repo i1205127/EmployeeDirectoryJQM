@@ -4,10 +4,10 @@ $('#shiftListPage').live('pageshow', function(event) {
 	$.getJSON(serviceURL + 'getshift.php?id='+id, function (data) {
 		var reports = data.items;
 		$.each(reports, function(index, employee) {
-			$('#shiftList').append('<li><a href="employeedetails.html?id=' + employee.id + '">' +
-					'<h4>' + employee.firstName + ' ' + employee.lastName + '</h4>' +
-					'<p>' + employee.title + '</p>' +
-					'<span class="ui-li-count">' + employee.reportCount + '</span></a></li>');
+			$('#shiftList').append('<li><a href="employeedetails.html?id=' + employee.sid + '">' +
+					'<h4>' + employee.sdate + ' ' + employee.stime + '</h4>' +
+					'<p>' + employee.swardid + '</p>' +
+					'<span class="ui-li-count">' + employee.sfilled + '</span></a></li>');
 		});
 		$('#shiftList').listview('refresh');
 	});
