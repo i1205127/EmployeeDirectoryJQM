@@ -8,7 +8,7 @@ function displayEmployee(data) {
 	var managerPhone = "07403656097";
 	var managerEmail = "rasranasinghe@gmail.com"
 	console.log(employee);
-	$('#employeePic').attr('src', 'pics/' + employee.wspicture);
+	//$('#employeePic').attr('src', 'pics/' + employee.wspicture);
 	$('#fullName').text(employee.wsfname + ' ' + employee.wslname);
 	$('#employeeTitle').text(employee.title);
 	$('#city').text(employee.wardname);
