@@ -20,6 +20,7 @@ function handleLogin() {
     var u = $("#username", form).val();
     var p = $("#password", form).val();
     if(u != '' && p!= '') {
+             
         $.post("http://www.coldfusionjedi.com/demos/2011/nov/10/service.cfc?method=login&returnformat=json", {username:u,password:p}, function(res) {
             if(res == true) {
                 //store
