@@ -18,6 +18,6 @@ function getShiftList() {
 					'<p>' + employee.sfiled + '</p>' +
 					'</a></li>');
 		});
-		$('#employeeList').listview('refresh');
+		$('#shiftList').listview('refresh');
 	});
 }
