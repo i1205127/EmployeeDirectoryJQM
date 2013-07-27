@@ -5,6 +5,7 @@ $('#shiftListPage').live('pageshow', function(event) {
 		var reports = data.item;
 		$.each(reports, function(index, employee) {
 			$('#shiftList').append('<h4>' + employee.sdate + ' ' + employee.stime + '</h4>' +
+					'<p>' + employee.sid + '</p>' +
 					'<span class="ui-li-count">' + employee.sfilled + '</span></a>');
 		});
 		$('#shiftList').listview('refresh');
