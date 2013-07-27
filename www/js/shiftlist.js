@@ -4,10 +4,10 @@ var serviceURL = "http://polgahawelatown.com/EmployeeDirectoryJQM/services/";
 var employees;
 
 $('#shiftdetailsPage').bind('pageinit', function(event) {
-	getShiftList();
+	getEmployeeList();
 });
 
-function getShiftList() {
+function getEmployeeList() {
 	$.getJSON(serviceURL + 'getshifts.php', function(data) {
 		$('#shiftList li').remove();
 		employees = data.items;
