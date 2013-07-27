@@ -1,7 +1,7 @@
 //var serviceURL = "http://localhost/directory/services/";
 var serviceURL = "http://polgahawelatown.com/EmployeeDirectoryJQM/services/";
 
-var shift : [];
+var shift;
 
 $('#shiftdetailsPage').bind('pageinit', function(event) {
 	getShiftList();
@@ -9,12 +9,12 @@ $('#shiftdetailsPage').bind('pageinit', function(event) {
 
 function getShiftList() {
 	$.getJSON(serviceURL + 'getshifts.php', function(data) {
-		$('#employeeList li').remove();
+		//$('#employeeList li').remove();
 		shift = data.items;
-		
+		console.log(shift);
 		$.each(shift, function(index, shift) {
 			$('#shiftList').append('<li>' +
-					'<h4>' + shift.sdate + ' ' + shift.stime + '</h4>' +
+					'<h4>' + shift.id + ' ' + shift.stime + '</h4>' +
 					'<p>' + shift.sfilled + '</p>' +
 					'</li>');
 		});
