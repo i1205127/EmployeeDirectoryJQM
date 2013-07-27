@@ -1,23 +1,21 @@
-//var serviceURL = "http://localhost/directory/services/";
-var serviceURL = "http://polgahawelatown.com/EmployeeDirectoryJQM/services/";
+var shiftdata;
 
-var employees;
-
-$('#shiftListPage').bind('pageinit', function(event) {
-	getEmployeeList();
+$('#shiftListPage').live('pageshow', function(event) {
+	var id = getUrlVars()["id"];
+	console.log("reports for " + id);
+	$.getJSON(serviceURL + 'getshift.php?id='+id, getShifts);
 });
 
-function getEmployeeList() {
-	$.getJSON(serviceURL + 'getwardsisters.php', function(data) {
-		$('#shiftList li').remove();
-		employees = data.items;
-		$.each(employees, function(index, employee) {
-			$('#shiftList').append('<li><a href="wardsisterdetails.html?id=' + employee.wsid + '">' +
-					'<img src="pics/' + employee.wspicture + '"/>' +
-					'<h4>' + employee.wsfname + ' ' + employee.wslname + '</h4>' +
-					'<p>' + employee.wardid + '</p>' +
-					'</a></li>');
+function getShifts(data){
+		
+		shiftdata = data.item;
+		
+		$.each(shiftdata, function(index, employee) {
+			$('#shiftList').append('<li><a href="shiftlist.html?id=' + employee.sid + '">' +
+					'<h4>' + employee.stime + ' ' + employee.sid + '</h4>' +
+					'<p>' + employee.sdate + '</p>' +
+					'<span class="ui-li-count">' + employee.reportCount + '</span></a></li>');
 		});
 		$('#shiftList').listview('refresh');
 	});
-}
+});
