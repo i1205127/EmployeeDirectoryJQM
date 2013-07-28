@@ -1,14 +1,25 @@
-$('#shiftListPage').live('pageshow', function(event) {
-	var id = getUrlVars()["id"];
-	console.log("reports for " + id);
-	$.getJSON(serviceURL + 'getshift.php?id='+id, function (data) {
-		var reports = data.item;
-		$.each(reports, function(index, employee) {
-			$('#shiftList').append('<li>' +
-					'<h4>' + employee.sdate + ' ' + employee.stime + '</h4>' +
-					'<p>' + employee.sid + '</p>' +
-					'<span class="ui-li-count">' + employee.sfilled + '</span></li>');
-		});
-		$('#shiftList').listview('refresh');
-	});
+$(document).bind('deviceready', function(){
+    $(function(){
+        $('form').submit(function(){
+            var landmarkID = $(this).parent().attr('data-landmark-id');
+            var postData = $(this).serialize();
+            
+            $.ajax({
+                type: 'POST',
+                data: postData+'&lid='+landmarkID,
+                //change the url for your project
+                url: 'http://your-domain.com/comments/save.php',
+                success: function(data){
+                    console.log(data);
+                    alert('Your comment was successfully added');
+                },
+                error: function(){
+                    console.log(data);
+                    alert('There was an error adding your comment');
+                }
+            });
+            
+            return false;
+        });
+    });
 });
