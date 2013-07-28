@@ -26,7 +26,11 @@ function setURL(){
 function validateUser(uName, pwd)
 {
     
-    $.ajax("http://shu-bsms.azurewebsites.net/json/login/"+uName+"/"+pwd).done(function(data) {
+    
+    http://polgahawelatown.com/EmployeeDirectoryJQM/services/getlogin.php?username=amith&password=123
+    //$.ajax("http://shu-bsms.azurewebsites.net/json/login/"+uName+"/"+pwd).done(function(data) {
+
+    $.ajax("http://polgahawelatown.com/EmployeeDirectoryJQM/services/getlogin.php?username="+uName+"&password="+pwd).done(function(data) {
                                                                       var repo = data;
                                                                       console.log(data);                                                    
                                                                        if(data.Username!=""){
