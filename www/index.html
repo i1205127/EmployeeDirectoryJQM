@@ -9,15 +9,32 @@
     
 <body>
         
-<div id="wardSisterListPage" data-role="page" >
+<div id="loginPage" data-role="page" >
 
 	<div data-role="header" data-position="fixed">
 		<h1>Nurse List</h1>
 	</div>
 
-	<div data-role="content">
-         <ul id="wardSisterList" data-role="listview" data-filter="true"></ul>
-    </div>	   	
+	<<div data-role="content">
+                <div class="ui-body ui-body-b ui-corner-all">
+                    <div class="contact-form">
+                        
+                        <div data-role="fieldcontain" class="text-field">
+                            <label for="username">User Name:</label>
+                            <input type="text" name="username" value="Chanaka" placeholder="" class="required" id="username" />
+                        </div>
+                        <div data-role="fieldcontain" class="text-field">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" value="123" placeholder="123" id="password" />
+                        </div>
+                        
+                        <div class="send" id="setURL">
+                            <input type="button" onclick="setURL();" value="Login" />
+                        </div>
+                    </div><!-- //.contact-form -->
+                </div>
+                <p class="copyright">Copyright &copy; Crazy. Designed by CrazyPathum</a></p>
+      </div><!-- /content -->	   	
 
 </div>
 
