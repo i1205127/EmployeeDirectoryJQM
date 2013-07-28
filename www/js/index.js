@@ -27,19 +27,21 @@ function validateUser(uName, pwd)
 {
     
     
-    http://polgahawelatown.com/EmployeeDirectoryJQM/services/getlogin.php?username=amith&password=123
-    //$.ajax("http://shu-bsms.azurewebsites.net/json/login/"+uName+"/"+pwd).done(function(data) {
 
-    $.ajax("http://polgahawelatown.com/EmployeeDirectoryJQM/services/getlogin.php?username="+uName+"&password="+pwd).done(function(data) {
+
+    $.getJSON("http://polgahawelatown.com/EmployeeDirectoryJQM/services/getlogin.php?username="+uName+"&password="+pwd).done(function(data) {
                                                                       var repo = data;
                                                                       console.log(data);                                                    
-                                                                       if(data.Username!=""){
-                                                                       window.localStorage["username"] = uName;
-                                                                       window.localStorage["password"] = pwd;
-                                                                       if(window.localStorage["username"] == uName)
-                                                                       {
+                                                                       if(repo.username==uName){
+                                                                       //window.localStorage["username"] = uName;
+                                                                       //window.localStorage["password"] = pwd;
+                                                                       //if(window.localStorage["username"] == uName)
+                                                                       //{
                                                                          $.mobile.changePage( "wardsisterlist.html", { transition: "slideup"});
-                                                                       }}});                        
+                                                                       //}
+                                                                       }
+                                                                       
+                                                                       });                        
                                                                       
 }
 
