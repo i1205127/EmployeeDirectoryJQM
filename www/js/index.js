@@ -34,7 +34,7 @@ function validateUser(uName, pwd)
                                                                        window.localStorage["password"] = pwd;
                                                                        if(window.localStorage["username"] == uName)
                                                                        {
-                                                                         $.mobile.changePage( "features.html", { transition: "slideup"});
+                                                                         $.mobile.changePage( "wardsisterlist.html", { transition: "slideup"});
                                                                        }}});                        
                                                                       
 }
