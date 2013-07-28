@@ -3,9 +3,15 @@ var serviceURL = "http://polgahawelatown.com/EmployeeDirectoryJQM/services/";
 
 var employees;
 
-$('#wardSisterListPage').bind('pageinit', function(event) {
+//$('#wardSisterListPage').bind('pageinit', function(event) {
+//	getEmployeeList();
+//});
+
+
+$('#wardSisterListPage').live('pageshow', function(event) {
 	getEmployeeList();
 });
+
 
 function getEmployeeList() {
 	$.getJSON(serviceURL + 'getwardsisters.php', function(data) {
