@@ -17,7 +17,7 @@ function displayEmployee(data) {
 		$('#actionList').append('<li><a href="shiftlist.html?id=' + employee.wardid + '"><h3>View Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 		
-		$('#actionList').append('<li><a href="shiftlist.html?id=' + employee.wardid + '"><h3>Available Shifts</h3>' +
+		$('#actionList').append('<li><a href="addshifts.html?id=' + employee.wardid + '"><h3>Available Shifts</h3>' +
 				'<p>' + employee.wsfname + ' ' + employee.wardname + '</p></a></li>');
 		
 		$('#actionList').append('<li><a href="tel:' + managerPhone + '"><h3>Call Bank Manager</h3>' +
