@@ -32,15 +32,20 @@ function validateUser(uName, pwd)
     $.getJSON("http://polgahawelatown.com/EmployeeDirectoryJQM/services/getlogin.php?username="+uName+"&password="+pwd).done(function(data) {
                                                                       var repo = data;
                                                                       console.log(data);                                                    
-                                                                       if(repo.username==uName){
+                                                                       if(repo.username=="amith"){
                                                                        //window.localStorage["username"] = uName;
                                                                        //window.localStorage["password"] = pwd;
                                                                        //if(window.localStorage["username"] == uName)
                                                                        //{
                                                                          $.mobile.changePage( "wardsisterlist.html", { transition: "slideup"});
                                                                        //}
+                                                                       } else if (repo.username=="dave"){
+	                                                                       $.mobile.changePage("bankmanager.html");
                                                                        }
-                                                                       
+                                                                        else if(repo.username=="navodth"){
+	                                                                       $.mobile.changePage("banknurse.html");
+
+                                                                        }
                                                                        });                        
                                                                       
 }
