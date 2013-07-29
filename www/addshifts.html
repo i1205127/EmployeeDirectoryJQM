@@ -1,48 +1,39 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	        
-    <script>
-        function onBodyLoad() {		
-            document.addEventListener("deviceready",onDeviceReady,false);
-        }
-    </script>
-        
-    <style>
-        label, b {
-            display: block;
-        }
-    </style>
 </head>
-<body onload="onBodyLoad()">
-
-<div id="addShiftPage" data-role="page" data-add-back-btn="true">
-
-	<div data-role="header" >
-		<h1>Shift Lists</h1>
-	</div>
-	
-	<div data-role="content">
-    	<div id="landmark-1" data-landmark-id="1">
-			<form>
-				<label for="email">
-				<b>Email</b>
-				<input type="email" id="email" name="email">
-				</label>
-
-				<label for="comment">
-				<b>Comment</b>
-				<textarea id="comment" name="comment" cols="30" rows="10"></textarea>
-				</label>
-		
-				<input type="submit" value="Save">
-			</form>
-		</div>
-    </div>	
     
+<body>
+        
+<div id="addShiftPage" data-role="page" >
 
+	<div data-role="header" data-position="fixed">
+		<h1>Add Shifts</h1>
+	</div>
+
+	<div data-role="content">
+                <div class="ui-body ui-body-b ui-corner-all">
+                    <div class="contact-form">
+                        
+                        <div data-role="fieldcontain" class="text-field">
+                            <label for="date">Date:</label>
+                            <input type="text" name="date" value="" placeholder="" class="required" id="date" />
+                        </div>
+                        <div data-role="fieldcontain" class="text-field">
+                            <label for="time">Time:</label>
+                            <input type="text" name="time" value="" placeholder="" id="time" />
+                        </div>
+                        
+                        <div class="send" id="setShiftURL">
+                            <input type="button" onclick="setShiftURL();" value="Add Shift" />
+                        </div>
+                    </div><!-- //.contact-form -->
+                </div>
+                <p class="copyright">Copyright &copy; Crazy. Designed by CrazyPathum</a></p>
+      </div><!-- /content -->	   	
 
 </div>
 
 </body>
+
 </html>
